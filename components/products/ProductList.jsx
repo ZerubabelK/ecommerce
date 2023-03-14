@@ -12,16 +12,17 @@ function ProductList() {
     dispatch(addToCart(product));
   };
   return (
-    <div className="w-screen lg:grid lg:grid-cols-4">
+    <div className="w-screen lg:grid lg:grid-cols-4 md:grid md:grid-cols-3 sm:grid sm: grid-cols-2">
       {products.map((product) => (
         <div
           key={product.id}
           className="col-span-1 mx-4 shadow-md my-5 ease-in-out transition rounded-xl px-4 py-3 hover:scale-105"
         >
-          <div className="relative">
-            <img
+          <div className="relative w-full min-h-[180px]">
+            <Image
               className="object-contain h-56 w-full z-0"
               src={product.image}
+              fill
               alt=""
             />
             <FcLikePlaceholder className="absolute top-0 right-0 text-xl" />

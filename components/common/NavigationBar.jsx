@@ -21,11 +21,11 @@ function NavigationBar() {
     if (isModalOpen && carts.length == 0) setIsModalOpen(false);
   }, [carts]);
   return (
-    <nav className="fixed drop-shadow-md flex flex-row justify-evenly items-center w-screen bg-white z-10">
+    <nav className="fixed flex justify-between z-10 bg-white w-screen items-center px-2 pr-3 md:fixed md:drop-shadow-md md:flex md:flex-row md:justify-evenly md:items-center md:w-screen md:bg-white md:z-10">
       <div className="z-10">
         <img className="w-28 h-28 z-10" src="/logo.jpg" alt="Zadicus logo" />
       </div>
-      <ul className="flex flex-row space-x-7">
+      <ul className="hidden md:flex md:flex-row md:space-x-7">
         <li className="flex flex-col items-center z-10">
           <Link href="/"> Home</Link>
           <UnderLined path={"/"} />
@@ -44,20 +44,6 @@ function NavigationBar() {
         </li>
       </ul>
       <div className="flex space-x-3">
-        <div className="relative h-max">
-          {isModalOpen ? <Cart /> : <></>}
-          <button
-            className=" z-10"
-            onClick={(_) => {
-              if (carts.length > 0) setIsModalOpen(!isModalOpen);
-            }}
-          >
-            <FaCartArrowDown className="text-xl z-10" />
-            <span className="absolute z-10 -top-2 -right-2 bg-red-500 h-4 w-4 text-white font-semibold rounded-full text-xs flex justify-center items-center">
-              {carts.length}
-            </span>
-          </button>
-        </div>
         {isLogged ? (
           <div></div>
         ) : (
@@ -70,6 +56,20 @@ function NavigationBar() {
             </button>
           </div>
         )}
+        <div className="sm:relative h-max">
+          {isModalOpen ? <Cart /> : <></>}
+          <button
+            className="relative z-10"
+            onClick={(_) => {
+              if (carts.length > 0) setIsModalOpen(!isModalOpen);
+            }}
+          >
+            <FaCartArrowDown className="text-xl z-10" />
+            <span className="absolute z-10 -top-2 -right-2 bg-red-500 h-4 w-4 text-white font-semibold rounded-full text-xs flex justify-center items-center">
+              {carts.length}
+            </span>
+          </button>
+        </div>
       </div>
     </nav>
   );
