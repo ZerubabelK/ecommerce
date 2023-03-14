@@ -1,10 +1,11 @@
 import React from "react";
-export default ({ rating }) => {
+function StarRating({ rating }) {
   return (
     <div>
       {[...Array(5)].map((star, index) => {
         return (
           <span
+            key={index}
             className={
               index < rating.rate
                 ? "text-yellow-500 text-3xl cursor-pointer"
@@ -17,4 +18,5 @@ export default ({ rating }) => {
       })}
     </div>
   );
-};
+}
+export default StarRating;

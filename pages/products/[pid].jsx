@@ -1,5 +1,6 @@
 import StarRating from "@/components/common/StarRating";
 import { fetchProductById } from "@/store/slices/product";
+import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -17,7 +18,7 @@ function Details() {
     <div className="h-full">
       <div className="lg:grid lg:grid-cols-12 flex flex-wrap justify-center max-w-screen-xl mx-auto">
         <div className="lg:h-[70vh] h-[60vh] col-span-4">
-          <img src={product.image} className="h-full" alt="" />
+          <Image src={product.image} className="h-full" alt="" />
         </div>
         <div className="col-span-8">
           <h1 className="text-xl">{product.title}</h1>

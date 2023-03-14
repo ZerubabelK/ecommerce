@@ -2,6 +2,7 @@ import {
   changeCartItemQuantity,
   deleteItemFromCart,
 } from "@/store/slices/product";
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { FaTrash } from "react-icons/fa";
@@ -27,7 +28,7 @@ function Cart() {
             className="flex border-t py-2 items-center space-x-3"
           >
             <div className="flex items-center">
-              <img src={cart.image} className="w-16" alt="" />
+              <Image src={cart.image} className="w-16" alt="" />
             </div>
             <div className="">
               <div className="flex justify-between">

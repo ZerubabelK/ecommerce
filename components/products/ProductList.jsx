@@ -4,6 +4,7 @@ import { FcLikePlaceholder } from "react-icons/fc";
 import Link from "next/link";
 import StarRating from "../common/StarRating";
 import { addToCart } from "@/store/slices/product";
+import Image from "next/image";
 function ProductList() {
   const { products } = useSelector((state) => state.product);
   const dispatch = useDispatch();
@@ -18,7 +19,7 @@ function ProductList() {
           className="col-span-1 mx-4 shadow-md my-5 ease-in-out transition rounded-xl px-4 py-3 hover:scale-105"
         >
           <div className="relative">
-            <img
+            <Image
               className="object-contain h-56 w-full z-0"
               src={product.image}
               alt=""
