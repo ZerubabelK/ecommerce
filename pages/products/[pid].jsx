@@ -18,7 +18,7 @@ function Details() {
     <div className="h-full">
       <div className="lg:grid lg:grid-cols-12 flex flex-wrap justify-center max-w-screen-xl mx-auto">
         <div className="lg:h-[70vh] h-[60vh] col-span-4">
-          <Image src={product.image} className="h-full" alt="" />
+          <img src={product.image} className="h-full" alt="" />
         </div>
         <div className="col-span-8">
           <h1 className="text-xl">{product.title}</h1>

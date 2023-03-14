@@ -23,7 +23,7 @@ function NavigationBar() {
   return (
     <nav className="fixed drop-shadow-md flex flex-row justify-evenly items-center w-screen bg-white z-10">
       <div className="z-10">
-        <Image className="w-28 h-28 z-10" src="/logo.jpg" alt="Zadicus logo" />
+        <img className="w-28 h-28 z-10" src="/logo.jpg" alt="Zadicus logo" />
       </div>
       <ul className="flex flex-row space-x-7">
         <li className="flex flex-col items-center z-10">

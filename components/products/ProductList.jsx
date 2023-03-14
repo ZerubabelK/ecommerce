@@ -19,7 +19,7 @@ function ProductList() {
           className="col-span-1 mx-4 shadow-md my-5 ease-in-out transition rounded-xl px-4 py-3 hover:scale-105"
         >
           <div className="relative">
-            <Image
+            <img
               className="object-contain h-56 w-full z-0"
               src={product.image}
               alt=""
